@@ -1,0 +1,10 @@
+/api/my/userInfo 1
+/api/app/service 1
+/api/home/v2/recommend 1
+/api/push/gensign 1
+/api/my/unreadCount 1
+/api/launchInfo?dayCount=7 1
+/api/repo/prxe8a2a95c112a8f455b14680ebb222c86 1
+/api/settings?keys=satisSurvey 1
+/api/repos/v2/recommend?offset=0&limit=20 1
+/api/comments?resType=3&resId=prxe8a2a95c112a8f455b14680ebb222c86&offset=0&limit=3 1

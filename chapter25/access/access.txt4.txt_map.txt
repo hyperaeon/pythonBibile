@@ -1,0 +1,4 @@
+/api/product/prx9c38b84c1ce02ad5d4baf5b3117393aa/detail 1
+/api/repo/list/repos/prx9c38b84c1ce02ad5d4baf5b3117393aa?type=1 1
+/api/repo/detail/recommend?repoId=prxe8a2a95c112a8f455b14680ebb222c86 1
+/api/product/prx9c38b84c1ce02ad5d4baf5b3117393aa/notes?offset=0&limit=5 1

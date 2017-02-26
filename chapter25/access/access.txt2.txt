@@ -1,0 +1,10 @@
+10.165.179.3 - - [22/Feb/2017:08:43:38 +0800] "GET /api/repo/prxe8a2a95c112a8f455b14680ebb222c86 HTTP/1.0" 200 4637 0.195
+10.165.179.3 - - [22/Feb/2017:08:43:39 +0800] "GET /api/comments?resType=3&resId=prxe8a2a95c112a8f455b14680ebb222c86&offset=0&limit=3 HTTP/1.0" 200 1314 0.044
+10.165.179.3 - - [22/Feb/2017:08:43:39 +0800] "GET /api/repo/detail/recommend?repoId=prxe8a2a95c112a8f455b14680ebb222c86 HTTP/1.0" 200 2 0.075
+10.165.179.3 - - [22/Feb/2017:08:43:41 +0800] "GET /api/product/prx9c38b84c1ce02ad5d4baf5b3117393aa/detail HTTP/1.0" 200 6189 0.306
+10.165.179.3 - - [22/Feb/2017:08:43:42 +0800] "GET /api/product/prx9c38b84c1ce02ad5d4baf5b3117393aa/notes?offset=0&limit=5 HTTP/1.0" 200 2000 0.187
+10.165.179.3 - - [22/Feb/2017:08:43:42 +0800] "GET /api/repo/list/repos/prx9c38b84c1ce02ad5d4baf5b3117393aa?type=1 HTTP/1.0" 200 1982 0.217
+10.165.179.3 - - [22/Feb/2017:08:44:11 +0800] "GET /api/my/repos?offset=0&limit=1000&type=2 HTTP/1.0" 200 2860 0.159
+10.165.179.3 - - [22/Feb/2017:08:45:22 +0800] "GET /api/app/service HTTP/1.0" 200 841 0.024
+10.165.179.3 - - [22/Feb/2017:08:45:22 +0800] "GET /api/launchInfo?dayCount=7 HTTP/1.0" 200 39 0.027
+10.165.179.3 - - [22/Feb/2017:08:45:22 +0800] "POST /api/login/initApp?pdtVersion=10300&deviceType=Xiaomi%20Redmi%203X&systemName=Android&systemVersion=23&uniqueID=b0a7a50e5f416ca2 HTTP/1.0" 200 181 0.057

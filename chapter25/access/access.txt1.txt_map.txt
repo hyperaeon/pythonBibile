@@ -1,0 +1,8 @@
+/api/my/userInfo 2
+/api/my/unreadCount 2
+/api/my/repos?offset=0&limit=10&type=2 1
+/api/my/notes?count=6&type=2 1
+/api/home/v2/recommend 1
+/api/home/v2/classify 1
+/api/timeline?pageEndId=0&count=20 1
+/api/my/recommend/users 1
