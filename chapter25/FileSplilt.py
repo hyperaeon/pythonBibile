@@ -9,7 +9,7 @@ __author__ = 'hzliyong'
 
 def FileSplit(sourceFile, targetFolder):
     sFile = open(sourceFile, 'r')
-    number = 10
+    number = 1000
     dataLine = sFile.readline()
     tempData = []
     fileNum = 1
