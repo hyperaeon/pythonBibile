@@ -1,10 +1,71 @@
-/api/my/userInfo 1
-/api/app/service 1
-/api/home/v2/recommend 1
-/api/push/gensign 1
-/api/my/unreadCount 1
-/api/launchInfo?dayCount=7 1
-/api/repo/prxe8a2a95c112a8f455b14680ebb222c86 1
-/api/settings?keys=satisSurvey 1
-/api/repos/v2/recommend?offset=0&limit=20 1
-/api/comments?resType=3&resId=prxe8a2a95c112a8f455b14680ebb222c86&offset=0&limit=3 1
+GET /api/my/unreadCount 112
+GET /api/my/userInfo 79
+GET /api/settings 63
+POST /api/login/initApp 62
+GET /api/app/service 56
+GET /api/launchInfo 53
+GET /api/home/v2/recommend 50
+GET /api/repo/detail/recommend 48
+GET /api/push/gensign 42
+GET /api/v2/comments 38
+POST /api/praise 32
+GET /api/comments 31
+GET /api/my/notes 29
+GET /api/my/v2/repos 28
+GET /api/repo/prx3a9e780d146f3000b84e8cc98537309f 27
+POST /api/report/appactive 20
+GET /api/repos/v2/recommend 20
+GET /api/tag 16
+GET /api/app/upgrade 13
+GET /api/my/repos 13
+GET /api/home/v2/classify 10
+GET /api/my/binding 9
+POST /api/login/session 9
+GET /api/timeline 8
+GET /api/my/recommend/users 7
+GET /api/note/detail/recommend 6
+POST /api/login/anonymous 6
+GET /api/repo/prx1edace09027c69c7554a3a21a9bd6fcb 6
+POST /api/v2/favor 5
+GET /api/taginfo 4
+GET /api/repo/prxcd237afa708e038642f8af35b76184fa 4
+GET /api/repo/prx2194aa5e400bb3cbfdd15fc8ac69413e 4
+GET /api/repo/prx5998c6fef997d506acb41028bf97d602 3
+POST /api/repo/cover 3
+GET /api/repo/prx722d3d22123f289f64687c752f58c843 3
+GET /api/note/prx281ef78f3d6d348ed4cb72daa9630cf0 3
+GET /api/user/11111/v2/activities 2
+GET /api/user/2003 2
+GET /api/repo/prxc7b452cdf70428733281db30c3ccdac3 2
+GET /api/user/11111/v2/repos 2
+GET /api/user/11111/notes 2
+GET /api/user/2003/v2/activities 2
+GET /api/user/2003/v2/repos 2
+GET /api/repo/prx054d80b0e8be94b80d24198ee2f3202b 2
+GET /api/repo/prx5b31e41296763eb412a56e4120faf5c0 2
+GET /api/user/11111 2
+GET /api/product/prx813c9f66975491794f4857787b6570b6/v2/notes 1
+POST /api/externalShare 1
+GET /api/my/tags 1
+GET /api/repo/prx04c3955b6fdc63c88dd91169a069d575 1
+GET /api/repo/prx8054905af76cf069137c0fa7a632ca4b 1
+POST /api/follow 1
+GET /api/note/prxa58be7a0b15613fc7f9b828046a2b361 1
+GET /api/note/prx1b813c33952b290bd73a11baed12c4f5 1
+GET /api/my/brands 1
+GET /api/repo/prxe8a2a95c112a8f455b14680ebb222c86 1
+GET /ms/user/current 1
+GET /api/product/prx813c9f66975491794f4857787b6570b6/detail 1
+POST /api/repo/makepublic 1
+GET /api/repo/prx703cd177b6b3a2da7c9278ffaefdebf1 1
+GET /api/note/prxcdfb8249c935a134d686d3302234682b 1
+GET /api/repo/list/repos/prx71835ed88802aad3b827cd629663db53 1
+GET /api/note/prxd85d878c0c6c9dcba4206d349d932d5d 1
+GET /api/repo/listname 1
+GET /api/repo/prx94312ecc0226efc2e6b3da5a32da7b6e 1
+POST /api/my/defaultRepo/prxd04e2da04b9283340e1c65b09c51bb51 1
+GET /api/product/prx71835ed88802aad3b827cd629663db53/v2/notes 1
+GET /api/product/prx71835ed88802aad3b827cd629663db53/detail 1
+GET /api/note/prx45b0b8e8f6bc19cad8b8c03600a64e1b 1
+GET /index.html 1
+GET /api/repo/list/repos/prx813c9f66975491794f4857787b6570b6 1

@@ -1,10 +1,98 @@
-/api/repo/list/repos/prx9c38b84c1ce02ad5d4baf5b3117393aa?type=1 1
-/api/login/initApp?pdtVersion=10300&deviceType=Xiaomi%20Redmi%203X&systemName=Android&systemVersion=23&uniqueID=b0a7a50e5f416ca2 1
-/api/product/prx9c38b84c1ce02ad5d4baf5b3117393aa/detail 1
-/api/my/repos?offset=0&limit=1000&type=2 1
-/api/comments?resType=3&resId=prxe8a2a95c112a8f455b14680ebb222c86&offset=0&limit=3 1
-/api/launchInfo?dayCount=7 1
-/api/app/service 1
-/api/repo/prxe8a2a95c112a8f455b14680ebb222c86 1
-/api/repo/detail/recommend?repoId=prxe8a2a95c112a8f455b14680ebb222c86 1
-/api/product/prx9c38b84c1ce02ad5d4baf5b3117393aa/notes?offset=0&limit=5 1
+GET /api/my/unreadCount 131
+GET /api/my/userInfo 124
+GET /api/app/service 52
+GET /api/settings 50
+GET /api/comments 50
+GET /api/repo/detail/recommend 50
+GET /api/launchInfo 45
+POST /api/login/initApp 36
+GET /api/my/notes 32
+GET /api/v2/comments 32
+GET /api/search 27
+GET /api/my/v2/repos 23
+GET /api/push/gensign 22
+GET /api/search/suggest 22
+GET /api/home/v2/recommend 19
+GET /api/app/upgrade 18
+GET /api/product/notehint 14
+GET /api/product/base 13
+GET /api/repo/prx3a9e780d146f3000b84e8cc98537309f 13
+GET /api/app/currencies 13
+GET /api/note/product/1016143 13
+GET /api/my/repos 12
+GET /api/note/detail/recommend 12
+GET /api/home/v2/classify 11
+GET /api/repos/v2/recommend 10
+GET /api/repo/prx054d80b0e8be94b80d24198ee2f3202b 9
+POST /api/follow 8
+GET /api/repo/prx1c646daf6799cb685e86895a278af99c 7
+POST /api/report/appactive 7
+GET /api/note/prx1b813c33952b290bd73a11baed12c4f5 5
+GET /api/repo/prx5998c6fef997d506acb41028bf97d602 4
+GET /api/timeline 4
+GET /api/repo/prxe7cb813b29c13000ff7abd3d218fd555 4
+GET /api/tag 4
+POST /api/externalShare 4
+POST /api/praise 4
+GET /api/product/sku/list 4
+GET /api/my/recommend/users 4
+GET /api/repo/prxaf5161bd6624b7a931a515ba56431d33 3
+GET /api/note/prx780b9727ab63c52033e017eda9f33f61 3
+GET /api/product/prx3f749cca2ad474cddcdacd5042700041/v2/notes 2
+GET /api/user/1016478/v2/activities 2
+GET /api/product/prxd04e2da04b9283340e1c65b09c51bb51/detail 2
+GET /api/user/1016478 2
+GET /api/repo/list/repos/prx3f749cca2ad474cddcdacd5042700041 2
+GET /api/repo/prxafbc4544eac855af09a168811bb8f0e1 2
+POST /api/repo 2
+POST /api/note 2
+GET /api/taginfo 2
+GET /api/repo/prx7e1c820fce5a4d2f52f2c4e11fe890ed 2
+GET /api/user/1015017/notes 2
+GET /api/user/1015017 2
+GET /api/user/1015017/v2/activities 2
+GET /api/repo/list/repos/prxd04e2da04b9283340e1c65b09c51bb51 2
+GET /api/repo/prx48e7193c10a25bfd4d6ef415720281a1 2
+GET /api/product/prx3f749cca2ad474cddcdacd5042700041/detail 2
+GET /api/event/1022053 2
+GET /api/product/prxd04e2da04b9283340e1c65b09c51bb51/v2/notes 2
+GET /api/user/1015017/v2/repos 2
+POST /api/repo/cover 1
+GET /api/note/prxa58be7a0b15613fc7f9b828046a2b361 1
+GET /api/user/1016143/v2/activities 1
+GET /api/repo/prx664374c70aa44a682360abdb2af0394b 1
+GET /api/repo/prxd430b797dd78c7efc5016b7aa2cd2a47 1
+GET /api/note/prxb06c8bd464499f9e595cba4ba939c657 1
+GET /api/note/prx45b0b8e8f6bc19cad8b8c03600a64e1b 1
+GET /api/activity/1 1
+GET /api/repo/prx1edace09027c69c7554a3a21a9bd6fcb 1
+POST /api/note/prx1b813c33952b290bd73a11baed12c4f5 1
+GET /api/product/prxca1beec33ac44d04f7e8ad3e97f1b2e4/detail 1
+GET /api/user/11111/v2/repos 1
+GET /api/repo/prx5b1427faa14de8eb98b5c42b70234da0 1
+GET /api/product/prx553efd84f7931b400f74ef2a7e801b22/v2/notes 1
+GET /api/product/prx553efd84f7931b400f74ef2a7e801b22/detail 1
+GET /api/repo/list/repos/prx553efd84f7931b400f74ef2a7e801b22 1
+POST /api/login/session 1
+GET /api/product/prx27623e6dcf3a88e375f8bca3ab7d0d0b/v2/notes 1
+GET /api/repo/prx699264a729c5cc36593ffe19f95e285e 1
+GET /api/user/1016143 1
+GET /api/repo/prx04c3955b6fdc63c88dd91169a069d575 1
+GET /api/user/11111/v2/activities 1
+GET /api/product/prxd577c6b0c8f10d6e2fb8c8934df856ac/v2/notes 1
+GET /api/product/prxca1beec33ac44d04f7e8ad3e97f1b2e4/v2/notes 1
+GET /api/repo/list/repos/prx5382ada19f981314f222de1c4abf230d 1
+GET /api/product/prx5382ada19f981314f222de1c4abf230d/v2/notes 1
+GET /api/repo/list/repos/prxca1beec33ac44d04f7e8ad3e97f1b2e4 1
+POST /api/repo/makepublic 1
+GET /api/repo/list/repos/prxd577c6b0c8f10d6e2fb8c8934df856ac 1
+GET /api/product/prxd577c6b0c8f10d6e2fb8c8934df856ac/detail 1
+GET /api/product/prx27623e6dcf3a88e375f8bca3ab7d0d0b/detail 1
+GET /api/product/prx5382ada19f981314f222de1c4abf230d/detail 1
+GET /api/user/1016143/v2/repos 1
+GET /api/user/11111/notes 1
+GET /api/note/prx0b4235ccc0a6a194aa21d3ab627ddd4d 1
+GET /api/user/11111 1
+GET /api/note/prxdb8e133221c9d3a3adbd87229300df34 1
+POST /api/my/defaultRepo/prx3f749cca2ad474cddcdacd5042700041 1
+GET /api/repo/list/repos/prx27623e6dcf3a88e375f8bca3ab7d0d0b 1
