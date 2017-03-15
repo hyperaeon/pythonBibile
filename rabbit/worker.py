@@ -5,6 +5,7 @@ import time
 
 __author__ = 'hzliyong'
 
+queue = 'task_queue'
 
 def callback(ch, method, properties, body):
     s = str(body)
@@ -16,8 +17,9 @@ def callback(ch, method, properties, body):
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
-channel.queue_declare(queue = 'hello', durable=True)
+channel.queue_declare(queue = queue, durable=True)
 
-channel.basic_consume(callback, queue = 'hello')
+channel.basic_qos(prefetch_count=1)
+channel.basic_consume(callback, queue = queue)
 print('[*] Waiting for message. To exit press CTRL+C')
 channel.start_consuming()

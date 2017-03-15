@@ -8,8 +8,8 @@ __author__ = 'hzliyong'
 
 
 def FileSplit(sourceFile, targetFolder):
-    sFile = open(sourceFile, 'r')
-    number = 1000
+    sFile = open(sourceFile, 'r', encoding= 'utf-8')
+    number = 50000
     dataLine = sFile.readline()
     tempData = []
     fileNum = 1
@@ -23,7 +23,7 @@ def FileSplit(sourceFile, targetFolder):
             if not dataLine:
                 break;
         tFileName = os.path.join(targetFolder, os.path.split(sourceFile)[1] + str(fileNum) + '.txt')
-        tFile = open(tFileName, 'a+')
+        tFile = open(tFileName, 'a+', encoding= 'utf-8')
         tFile.writelines(tempData)
         tFile.close()
         tempData = []
@@ -33,4 +33,5 @@ def FileSplit(sourceFile, targetFolder):
 
 
 if __name__ == "__main__":
-    FileSplit("access.txt", "access")
+    # FileSplit("access.txt", "access")
+    FileSplit("dalog", "log")
