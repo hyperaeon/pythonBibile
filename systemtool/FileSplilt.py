@@ -8,7 +8,7 @@ import tkinter
 __author__ = 'hzliyong'
 
 
-def split(sourceFile, targetFolder, number, flist):
+def split(sourceFile, targetFolder, number, flist, progress):
     sFile = open(sourceFile, 'r', encoding= 'utf-8')
     dataLine = sFile.readline()
     tempData = []
@@ -29,9 +29,10 @@ def split(sourceFile, targetFolder, number, flist):
         flist.insert(tkinter.END, tFileName + '\n')
         tFile.writelines(tempData)
         tFile.close()
-        tempData = []
+        tempData = []#清空数据，重新存放读入的数据
         print(tFileName + " 创建于：" + str(time.ctime()))
         fileNum += 1
+    progress['text'] = '共有' + str(fileNum - 1) + '个小文件'
     sFile.close()
 
 

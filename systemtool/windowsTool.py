@@ -16,7 +16,7 @@ from RubbishHandler import *
 
 
 rubbishExt = ['.tmp', '.bak', '.old', '.wbk', '.xlk', '._mp', '.gid', '.chk', '.syd', '.$$$', '.@@@', '.~*']
-fileTypes =  [('Txt','.txt'), ('log', '*.log'), ('Python', '*.py *.pyw'), ('All files', '*.*')]
+fileTypes =  [('log', '*.log'), ('text','.txt'), ('Python', '*.py *.pyw'), ('All files', '*.*')]
 
 class Window:
     def __init__(self):
@@ -47,9 +47,9 @@ class Window:
         menu.add_cascade(label = "文件搜索", menu = submenu)
 
         #创建“文件分割”子菜单
-        submenu = tkinter.Menu(menu, tearoff = 0)
-        submenu.add_command(label = "分割大文件", command = self.MenuSplitFile)
-        menu.add_cascade(label = "文件分割", menu = submenu)
+        # submenu = tkinter.Menu(menu, tearoff = 0)
+        # submenu.add_command(label = "分割大文件", command = self.MenuSplitFile)
+        # menu.add_cascade(label = "文件分割", menu = submenu)
 
 
         self.root.config(menu = menu)
@@ -73,6 +73,8 @@ class Window:
         self.tipLabel.place(x = 10, y = 70, width = 140, height = 20)
         self.tipTxt = tkinter.Text(self.root)
         self.tipTxt.place(x = 140, y = 70, width = 300, height = 20)
+        self.splitButton = tkinter.Button(self.root, text = "分割", command = self.MenuSplitFile)
+        self.splitButton.place(x = 450, y = 70, width = 40, height = 25)
 
         #创建文本框，显示文件列表
         self.flist = tkinter.Text(self.root)
@@ -132,7 +134,7 @@ class Window:
     #删除垃圾文件
     def DeleteRubbish(self, scanpath):
         global rubbishExt
-        self.flist.delete(0.0, tkinter.END)
+        self.flist.delete(0.0, tkinter.END)#tkinter.END表示结尾，.delete(0.0, tkinter.END)表示从开始到结尾的内容全部删掉
         s = rubbish(scanpath, rubbishExt, self.progress, self.flist)
         s.deleteRubbish()
 
@@ -206,7 +208,6 @@ class Window:
 
     #“按文件名称分割文件”菜单
     def MenuSplitFile(self):
-        print('调用文件分割方法')
         self.flist.delete(0.0, tkinter.END)
         t = threading.Thread(target= self.SplitFile, args = (self.sourceTxt.get(0.0, tkinter.END), self.destTxt.get(0.0, tkinter.END), self.tipTxt.get(0.0, tkinter.END)))
         t.start()
@@ -218,7 +219,6 @@ class Window:
         dest = dest.strip()
         tip = tip.strip()
         if source == "":
-            print('sd')
             tkinter.messagebox.showerror("错误提示", "请选择需要分割的文件")
             return
         if dest == '':
@@ -232,7 +232,7 @@ class Window:
         except:
             tkinter.messagebox.showerror("错误提示", "文件行数必须是整数")
             return
-        FileSplilt.split(source, dest, int(tip), self.flist)
+        FileSplilt.split(source, dest, int(tip), self.flist, self.progress)
 
 
 
