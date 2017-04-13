@@ -122,25 +122,30 @@ class Window:
 
     #“扫描垃圾文件”菜单
     def MenuScanRubbish(self):
-        result = tkinter.messagebox.askquestion("Windows系统工具", "扫描垃圾文件将需要较长的时间，是否继续？")
-        if result == 'no':
-            return
-        tkinter.messagebox.showinfo("Windows系统工具", "马上开始扫描垃圾文件")
+        # result = tkinter.messagebox.askquestion("Windows系统工具", "扫描垃圾文件将需要较长的时间，是否继续？")
+        # if result == 'no':
+        #     return
+        # tkinter.messagebox.showinfo("Windows系统工具", "马上开始扫描垃圾文件")
         #self.ScanRubbish()
+        extList = ",".join(rubbishExt)
+        h = tkinter.simpledialog.askstring('Windows系统工具', "请输入垃圾文件的扩展名，扩展名中间用逗号隔开", initialvalue = extList)
+        if h is None:
+            return
+        finalRubbishExt = h.split(',')
         self.drives = self.GetDrives()
-        t = threading.Thread(target=self.ScanRubbish, args=(self.drives,))
+        t = threading.Thread(target=self.ScanRubbish, args=(self.drives, finalRubbishExt))
         t.start()
 
     #删除垃圾文件
-    def DeleteRubbish(self, scanpath):
-        global rubbishExt
+    def DeleteRubbish(self, scanpath, rubbishExt):
+        # global rubbishExt
         self.flist.delete(0.0, tkinter.END)#tkinter.END表示结尾，.delete(0.0, tkinter.END)表示从开始到结尾的内容全部删掉
         s = rubbish(scanpath, rubbishExt, self.progress, self.flist)
         s.deleteRubbish()
 
     #“扫描垃圾文件”
-    def ScanRubbish(self, scanpath):
-        global rubbishExt
+    def ScanRubbish(self, scanpath, rubbishExt):
+        # global rubbishExt
         self.flist.delete(0.0, tkinter.END)
         s = rubbish(scanpath, rubbishExt, self.progress, self.flist)
         s.scanRubbish()
@@ -148,13 +153,18 @@ class Window:
 
     #“删除垃圾文件”菜单
     def MenuDelRubbish(self):
-        result = tkinter.messagebox.askquestion("Windows系统工具", "删除垃圾文件将需要较长的时间，是否继续？")
-        if result == 'no':
+        # result = tkinter.messagebox.askquestion("Windows系统工具", "删除垃圾文件将需要较长的时间，是否继续？")
+        # if result == 'no':
+        #     return
+        # tkinter.messagebox.showinfo("Windows系统工具", "马上开始删除垃圾文件！")
+        extList = ",".join(rubbishExt)
+        h = tkinter.simpledialog.askstring('Windows系统工具', "请输入垃圾文件的扩展名，扩展名中间用逗号隔开", initialvalue = extList)
+        if h is None:
             return
-        tkinter.messagebox.showinfo("Windows系统工具", "马上开始删除垃圾文件！")
+        finalRubbishExt = h.split(',')
         self.drives = self.GetDrives()
-        # t = threading.Thread(target=self.DeleteRubbish, args=(self.drives,))
-        # t.start()
+        t = threading.Thread(target=self.DeleteRubbish, args=(self.drives, finalRubbishExt))
+        t.start()
 
     #取得当前计算机的盘符
     def GetDrives(self):
