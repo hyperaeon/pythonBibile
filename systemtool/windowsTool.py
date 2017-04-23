@@ -9,18 +9,24 @@ import os, os.path
 import threading
 import tkinter.simpledialog
 import FileSplilt
-
+from tkinter.filedialog import askdirectory
+from tkinter import StringVar
 from tkinter import filedialog
 from Search import search
 from RubbishHandler import *
 
 
 rubbishExt = ['.tmp', '.bak', '.old', '.wbk', '.xlk', '._mp', '.gid', '.chk', '.syd', '.$$$', '.@@@', '.~*']
-fileTypes =  [('log', '*.log'), ('text','.txt'), ('Python', '*.py *.pyw'), ('All files', '*.*')]
+fileTypes = [('log', '*.log'), ('text','.txt'), ('Python', '*.py *.pyw'), ('All files', '*.*')]
+
+global selectedPath
+
+destPath = ''
 
 class Window:
     def __init__(self):
         self.root = tkinter.Tk()
+
 
         #创建菜单
         menu = tkinter.Menu(self.root)
@@ -66,8 +72,13 @@ class Window:
 
         self.destLabel = tkinter.Label(self.root, text = '被分割文件目标文件夹:')
         self.destLabel.place(x = 10, y = 40, width = 140, height = 20)
-        self.destTxt = tkinter.Text(self.root)
+        # self.destTxt = tkinter.Text(self.root)
+        global selectedPath
+        selectedPath = StringVar()
+        self.destTxt = tkinter.Entry(self.root, textvariable=selectedPath)
         self.destTxt.place(x = 140, y = 40, width = 300, height = 20)
+        self.destButton = tkinter.Button(self.root, text = "目的", command = self.selectPath)
+        self.destButton.place(x = 450, y = 40, width = 40, height = 25)
 
         self.tipLabel = tkinter.Label(self.root, text = '请输入每个文件的行数:')
         self.tipLabel.place(x = 10, y = 70, width = 140, height = 20)
@@ -90,11 +101,20 @@ class Window:
         self.progress = tkinter.Label(self.root, anchor = tkinter.W, text = '状态', bitmap = 'hourglass', compound = 'left')#bitmap的值有"error"，"hourglass"，"info"，"question"，"warning"
         self.progress.place(x = 10, y = 470, width = 480, height = 20)
 
+
     def MainLoop(self):
         self.root.title('Windows系统工具')
         self.root.minsize(500, 500)
         self.root.maxsize(500, 500)
         self.root.mainloop()
+
+
+    #选择文件夹
+    def selectPath(self):
+        path = askdirectory()
+        selectedPath.set(path)
+        global destPath
+        destPath = path
 
     #打开文件命令
     def fileOpen1(self):
@@ -219,7 +239,7 @@ class Window:
     #“按文件名称分割文件”菜单
     def MenuSplitFile(self):
         self.flist.delete(0.0, tkinter.END)
-        t = threading.Thread(target= self.SplitFile, args = (self.sourceTxt.get(0.0, tkinter.END), self.destTxt.get(0.0, tkinter.END), self.tipTxt.get(0.0, tkinter.END)))
+        t = threading.Thread(target= self.SplitFile, args = (self.sourceTxt.get(0.0, tkinter.END), destPath, self.tipTxt.get(0.0, tkinter.END)))
         t.start()
 
     #分割文件的具体实现逻辑
